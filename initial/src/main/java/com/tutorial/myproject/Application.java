@@ -12,7 +12,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.WebApplicationContext;
 
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
 @SpringBootApplication
+@EnableEurekaClient
 public class Application extends SpringBootServletInitializer {
 
     @Autowired
