@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: demoservice
+server:
+  port: 443
+  ssl:
+    key-store: keystore.p12
+    key-store-password: 123456
+    keyStoreType: PKCS12
+    keyAlias: tomcat
+
+---
+spring:
+  profiles: dev
+  application:
+    name: demoservice
+server:
+  port: 9090
+
+---
+spring:
+  profiles: prod
+  application:
+    name: demoservice
+server:
+  port: 4431
