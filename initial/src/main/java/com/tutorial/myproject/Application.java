@@ -1,6 +1,7 @@
 package com.tutorial.myproject;
 
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -17,6 +18,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient
 public class Application extends SpringBootServletInitializer {
+    private static final Logger LOG = Logger.getLogger(Application.class.getName());
 
     @Autowired
     RestTemplate restTemplate;

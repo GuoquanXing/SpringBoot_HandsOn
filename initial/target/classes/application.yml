@@ -7,8 +7,6 @@ eureka:
 spring:
   application:
     name: demoservice
-  zipkin:
-    baseUrl: http://localhost:9411/zipkin/
 server:
   port: 8080
 
