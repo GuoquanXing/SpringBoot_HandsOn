@@ -1,0 +1,42 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+    preferIpAddress: true
+spring:
+  application:
+    name: demoservice
+  zipkin:
+    baseUrl: http://localhost:9411/zipkin/
+server:
+  port: 8080
+
+---
+management:
+   port: 9000
+   security:
+      enabled: false
+# enable HTTPS:
+#  port: 443
+#  ssl:
+#    key-store: keystore.p12
+#    key-store-password: 123456
+#    keyStoreType: PKCS12
+#    keyAlias: tomcat
+
+---
+spring:
+  profiles: dev
+  application:
+    name: demoservice
+server:
+  port: 9090
+
+---
+spring:
+  profiles: prod
+  application:
+    name: demoservice
+server:
+  port: 4431
